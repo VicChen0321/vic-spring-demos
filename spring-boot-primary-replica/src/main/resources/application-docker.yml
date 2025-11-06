@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    primary:
+      url: jdbc:postgresql://postgres-primary:5432/mydb
+      username: app_user
+      password: secret
+      driver-class-name: org.postgresql.Driver
+      hikari:
+        pool-name: PrimaryHikariPool
+        maximum-pool-size: 10
+        minimum-idle: 5
+    replica1:
+      url: jdbc:postgresql://postgres-replica1:5432/mydb
+      username: app_user
+      password: secret
+      driver-class-name: org.postgresql.Driver
+      hikari:
+        pool-name: Replica1HikariPool
+        maximum-pool-size: 10
+        minimum-idle: 5
+    replica2:
+      url: jdbc:postgresql://postgres-replica2:5432/mydb
+      username: app_user
+      password: secret
+      driver-class-name: org.postgresql.Driver
+      hikari:
+        pool-name: Replica2HikariPool
+        maximum-pool-size: 10
+        minimum-idle: 5

@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: spring-boot-primary-replica
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+logging:
+  level:
+    com.vicchen.spring.boot.primary.replica.config: INFO
+    com.vicchen.spring.boot.primary.replica.aspect: INFO
+    root: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
